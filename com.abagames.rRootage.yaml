@@ -2,7 +2,7 @@ app-id: com.abagames.rRootage
 runtime: org.freedesktop.Platform
 runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
-command: rrootage
+command: run-rrootage.sh
 rename-desktop-file: rrootage.desktop
 rename-icon: rrootage
 rename-appdata-file: rrootage.appdata.xml
@@ -96,8 +96,14 @@ modules:
   - type: shell
     commands:
     - install -Dm644 rrootage.appdata.xml /app/share/appdata/rrootage.appdata.xml
+  - type: script
+    dest-filename: run-rrootage.sh
+    commands:
+    - !/bin/sh -e
+    - HOME=$XDG_CONFIG_HOME /app/bin/rrootage
   build-commands:
   - CC=clang;make -C src -f makefile.lin MORE_CFLAGS="-DLINUX -Wall -g"
   - install src/rrootage /app/bin/rrootage
+  - install -m 555 run-rrootage.sh /app/bin/run-rrootage.sh
   - install -d /app/share/games/rRootage
   - cp -R rr_share/* /app/share/games/rRootage
