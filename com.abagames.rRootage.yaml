@@ -49,7 +49,10 @@ modules:
   - cp src/*.h /app/include/bulletml/
   - cp src/tinyxml/*.h /app/include/bulletml/tinyxml/
   - cp src/lib*.a /app/lib/
-  - cp src/lib*.so* /app/lib/
+  - cp -a src/lib*.so* /app/lib/
+  cleanup:
+  - /app/include
+  - '*.a'
 - name: rrootage
   buildsystem: simple
   sources:
@@ -99,7 +102,6 @@ modules:
   - type: script
     dest-filename: run-rrootage.sh
     commands:
-    - !/bin/sh -e
     - HOME=$XDG_CONFIG_HOME /app/bin/rrootage
   build-commands:
   - CC=clang;make -C src -f makefile.lin MORE_CFLAGS="-DLINUX -Wall -g"
