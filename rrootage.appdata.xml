@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.abagames.rRootage</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>BSD-2-Clause-FreeBSD</project_license>
   <name>rRootage</name>
-  <summary>Defeat autocreated huge battleships.</summary>
+  <summary>Defeat autocreated huge battleships</summary>
   <description>
     <p>
       rRootage is an arcade style vertical shoot'em up with minimalist and psychedelic graphics.
@@ -14,13 +14,21 @@
     </p>
   </description>
   <developer_name>ABA Games</developer_name>
-  <url type="homepage">http://www.asahi-net.or.jp/~cs8k-cyu/</url>
+  <url type="homepage">https://www.asahi-net.or.jp/~cs8k-cyu/</url>
+  <url type="bugtracker">https://github.com/abagames/rrootage/issues</url>
+  <url type="vcs-browser">https://github.com/abagames/rrootage/</url>
   <url type="help">https://github.com/abagames/rrootage/blob/master/README.md</url>
   <launchable type="desktop-id">rrootage.desktop</launchable>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_0.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_1.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_2.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_0.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/joaquimrocha/com.abagames.rRootage/master/screenshots/screenshot-0.23a_2.png</image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">moderate</content_attribute>
