@@ -1,6 +1,6 @@
 app-id: com.abagames.rRootage
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: run-rrootage.sh
 rename-desktop-file: rrootage.desktop
@@ -104,7 +104,7 @@ modules:
     commands:
     - HOME=$XDG_CONFIG_HOME /app/bin/rrootage
   build-commands:
-  - CC=clang;make -C src -f makefile.lin MORE_CFLAGS="-DLINUX -Wall -g"
+  - CC=clang;make -C src -f makefile.lin MORE_CFLAGS="-DLINUX -std=gnu17 -Wall -g"
   - install src/rrootage /app/bin/rrootage
   - install -m 555 run-rrootage.sh /app/bin/run-rrootage.sh
   - install -d /app/share/games/rRootage
